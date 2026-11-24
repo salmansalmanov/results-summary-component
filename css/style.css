@@ -176,6 +176,7 @@ ul li {
 .score-value {
   color: var(--dark-gray-blue);
   font-weight: 700;
+  margin-right: 2px;
 }
 
 .score-max {
@@ -201,4 +202,36 @@ button:hover {
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .result {
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
+
+  .result p {
+    margin: 10px;
+  }
+
+  .summary {
+    border-radius: 0;
+  }
+
+  .summary h1 {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+
+  .summary li {
+    margin: 15px 0;
+  }
+
+  button {
+    margin: 10px 18px;
+  }
 }
