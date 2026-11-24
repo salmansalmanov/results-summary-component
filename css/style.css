@@ -9,6 +9,8 @@
 :root {
   --white: hsl(0, 0%, 100%);
   --light-lavender: hsl(241, 100%, 89%);
+  --heading-font-size: 1.5rem;
+  --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 body {
@@ -23,6 +25,14 @@ body {
 section {
   flex: 1;
   padding: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 15px;
 }
 
 .card {
@@ -50,11 +60,11 @@ section {
 .result h1 {
   color: var(--light-lavender);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--heading-font-size);
 }
 
 .score {
-  width: 8.5rem;
+  width: 11rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background: linear-gradient(
@@ -91,4 +101,104 @@ section {
 .summary {
   background-color: var(--white);
   border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary h1 {
+  margin-left: 20px;
+  font-size: var(--heading-font-size);
+  color: var(--dark-gray-blue);
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  height: 50px;
+  position: relative;
+}
+
+.reaction {
+  margin-top: 1.5rem;
+  background-color: hsl(0, 100%, 67%, 0.05);
+}
+
+.memory {
+  background-color: hsl(39, 100%, 56%, 0.05);
+}
+
+.verbal {
+  background-color: hsl(166, 100%, 37%, 0.05);
+}
+
+.visual {
+  background-color: hsl(234, 85%, 45%, 0.05);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.label img {
+  margin: 10px;
+}
+
+.label span {
+  font-weight: 500;
+}
+
+.reaction .label-name {
+  color: hsl(0, 100%, 67%);
+}
+
+.memory .label-name {
+  color: hsl(39, 100%, 56%);
+}
+
+.verbal .label-name {
+  color: hsl(166, 100%, 37%);
+}
+
+.visual .label-name {
+  color: hsl(234, 85%, 45%);
+}
+
+.summary p {
+  position: absolute;
+  right: 20px;
+}
+
+.score-value {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+
+.score-max {
+  color: hsl(241, 100%, 89%);
+}
+
+button {
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border: none;
+  margin: 20px;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
 }
